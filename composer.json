@@ -1,5 +1,5 @@
 {
-    "name": "buruhsd/ipay88",
+    "name": "buruhsd/php-ipay88",
     "description": "Ipay88 payment gateway module",
     "keywords": ["ipay88", "indonesia", "api"],
     "homepage": "https://github.com/buruhsd/php-ipay88",
