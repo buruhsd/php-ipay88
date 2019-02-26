@@ -61,6 +61,7 @@ class Payment {
 ```
 REFERENSI
 
-https://github.com/karyamedia/ipay88
+https://github.com/karyamedia/ipay88.
+<br>
 https://docs.ipay88.co.id/
 
