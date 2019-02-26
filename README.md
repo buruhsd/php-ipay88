@@ -9,7 +9,7 @@ forked from https://github.com/karyamedia/ipay88 for indonesia user
 I've make this project available to install via [Composer](https://getcomposer.org/) with following command:
 
 ```bash
-$ composer require buruhsd/php-ipay88 dev-master
+$ composer require aljawad/php-ipay88 dev-master
 ```
 
 ## Example Controller
