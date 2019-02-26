@@ -2,11 +2,9 @@
 
 Ipay88 payment gateway module.
 
-forked from https://github.com/karyamedia/ipay88 for indonesia user
-
 ## Installation
 
-I've make this project available to install via [Composer](https://getcomposer.org/) with following command:
+Dokumentasi lengkap bisa di lihat di [IPAY88](https://docs.ipay88.co.id/)
 
 ```bash
 $ composer require aljawad/php-ipay88 dev-master
@@ -31,13 +29,13 @@ class Payment {
 
 	public function index()
 	{
-		$request = new IPay88\Payment\Request($this->_merchantKey);
+		$request = new \IPay88\Payment\Request($this->_merchantKey);
 		$this->_data = array(
 			'merchantCode' => $request->setMerchantCode($this->_merchantCode),
 			'paymentId' =>  $request->setPaymentId(1),
 			'refNo' => $request->setRefNo('EXAMPLE0001'),
-			'amount' => $request->setAmount('0.50'),
-			'currency' => $request->setCurrency('MYR'),
+			'amount' => $request->setAmount('1000'),
+			'currency' => $request->setCurrency('IDR'),
 			'prodDesc' => $request->setProdDesc('Testing'),
 			'userName' => $request->setUserName('Your name'),
 			'userEmail' => $request->setUserEmail('email@example.com'),
@@ -45,19 +43,24 @@ class Payment {
 			'remark' => $request->setRemark('Some remarks here..'),
 			'lang' => $request->setLang('UTF-8'),
 			'signature' => $request->getSignature(),
-			'responseUrl' => $request->setResponseUrl('http://example.com/response'),
-			'backendUrl' => $request->setBackendUrl('http://example.com/backend')
+			'responseUrl' => $request->setResponseUrl('http://ipay88.test/response'),
+			'backendUrl' => $request->setBackendUrl('http://ipay88.test/backend'),
+			'xfield1' => $request->setXfield1('||IPP:3||'),
 			);
 
-		IPay88\Payment\Request::make($this->_merchantKey, $this->_data);
+		\IPay88\Payment\Request::make($this->_merchantKey, $this->_data);
 	}
 	
 	public function response()
 	{	
-		$response = (new IPay88\Payment\Response)->init($this->_merchantCode);
+		$response = (new \IPay88\Payment\Response)->init($this->_merchantCode);
 		echo "<pre>";
 		print_r($response);
 	}
 }
 ```
+REFERENSI
+
+https://github.com/karyamedia/ipay88
+https://docs.ipay88.co.id/
 
