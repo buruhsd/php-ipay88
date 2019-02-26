@@ -32,7 +32,7 @@ class Payment {
 		$request = new \IPay88\Payment\Request($this->_merchantKey);
 		$this->_data = array(
 			'merchantCode' => $request->setMerchantCode($this->_merchantCode),
-			'paymentId' =>  $request->setPaymentId(1),
+			// 'paymentId' =>  $request->setPaymentId(0),
 			'refNo' => $request->setRefNo('EXAMPLE0001'),
 			'amount' => $request->setAmount('1000'),
 			'currency' => $request->setCurrency('IDR'),
